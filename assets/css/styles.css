@@ -390,6 +390,12 @@ section.tight { padding-block: clamp(3rem, 6vw, 5rem); }
 .menu-toggle.open span:nth-child(2) { bottom: 9px; right: 2px; width: 26px; transform: rotate(-45deg); }
 
 @media (max-width: 960px) {
+  .site-header.light-on-dark:not(.scrolled) .nav-links {
+    background: white;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    border-color: transparent;
+  }
   .menu-toggle { display: block; z-index: 110; }
   .nav-links {
     position: fixed;
