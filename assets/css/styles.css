@@ -531,9 +531,10 @@ section.tight { padding-block: clamp(3rem, 6vw, 5rem); }
 /* Centered circular scroll indicator */
 .hero-scroll-center {
   position: absolute;
-  left: 50%;
+  left: 0; right: 0;
   bottom: clamp(2rem, 4vw, 3rem);
-  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
   z-index: 3;
 }
 .scroll-btn {
