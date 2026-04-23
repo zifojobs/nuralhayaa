@@ -368,18 +368,16 @@ section.tight { padding-block: clamp(3rem, 6vw, 5rem); }
 }
 .nav-cta:hover { background: var(--c-gold-400); transform: translateY(-1px); }
 
-.menu-toggle { display: none; width: 30px; height: 24px; position: relative; }
+.menu-toggle { display: none; position: relative; width: 30px; height: 18px; flex-shrink: 0; }
 .menu-toggle span {
-  position: absolute; left: 0; right: 0;
-  height: 1.5px; background: currentColor;
+  position: absolute; right: 0;
+  height: 1px; background: currentColor;
   transition: all var(--t);
 }
-.menu-toggle span:nth-child(1) { top: 0; }
-.menu-toggle span:nth-child(2) { top: 50%; transform: translateY(-50%); }
-.menu-toggle span:nth-child(3) { bottom: 0; }
-.menu-toggle.open span:nth-child(1) { top: 50%; transform: translateY(-50%) rotate(45deg); }
-.menu-toggle.open span:nth-child(2) { opacity: 0; }
-.menu-toggle.open span:nth-child(3) { bottom: 50%; transform: translateY(50%) rotate(-45deg); }
+.menu-toggle span:nth-child(1) { top: 3px; left: 0; width: 30px; }
+.menu-toggle span:nth-child(2) { bottom: 3px; width: 18px; }
+.menu-toggle.open span:nth-child(1) { top: 9px; left: 2px; width: 26px; transform: rotate(45deg); }
+.menu-toggle.open span:nth-child(2) { bottom: 9px; right: 2px; width: 26px; transform: rotate(-45deg); }
 
 @media (max-width: 960px) {
   .menu-toggle { display: block; z-index: 110; }
@@ -387,15 +385,16 @@ section.tight { padding-block: clamp(3rem, 6vw, 5rem); }
     position: fixed;
     inset: 0;
     flex-direction: column;
+    align-items: center;
     justify-content: center;
-    gap: 2rem;
+    gap: 2.25rem;
     background: var(--c-cream-100);
     transform: translateX(100%);
     transition: transform var(--t-slow);
   }
   .nav-links.open { transform: translateX(0); }
-  .nav-link { font-size: 1.5rem; font-family: var(--font-display); letter-spacing: 0.06em; text-transform: none; }
-  .nav-cta { font-size: 0.875rem; }
+  .nav-link { font-size: 1.5rem; font-family: var(--font-display); letter-spacing: 0.06em; text-transform: none; text-align: center; }
+  .nav-cta { font-size: 0.875rem; text-align: center; }
 }
 
 /* ---------- 7. HERO (editorial fullscreen) ---------- */
