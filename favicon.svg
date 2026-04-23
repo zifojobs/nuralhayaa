@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="10" fill="#1C4A2D"/>
+  <text x="50%" y="54%" dominant-baseline="middle" text-anchor="middle"
+        font-family="Georgia, 'Cormorant Garamond', serif"
+        font-style="italic" font-weight="500" font-size="30"
+        fill="#C9A961">N</text>
+</svg>

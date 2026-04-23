@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Page introuvable — NAID</title>
+  <meta name="description" content="La page que vous cherchez n'existe pas ou a été déplacée. Retour à l'accueil Nur Alhayaa Interior Design." />
+  <meta name="robots" content="noindex, follow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <style>
+    .err-wrap {
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 120px 24px 80px;
+      background: linear-gradient(180deg, var(--c-cream-100) 0%, #F3ECE0 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    .err-wrap::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        radial-gradient(circle at 20% 30%, rgba(201, 169, 97, 0.12), transparent 50%),
+        radial-gradient(circle at 80% 70%, rgba(28, 74, 45, 0.08), transparent 50%);
+      pointer-events: none;
+    }
+    .err-card {
+      position: relative;
+      max-width: 720px;
+      text-align: center;
+    }
+    .err-code {
+      font-family: var(--font-display);
+      font-style: italic;
+      font-size: clamp(6rem, 18vw, 14rem);
+      line-height: 0.9;
+      color: var(--c-green-800);
+      letter-spacing: -0.04em;
+      margin-bottom: 24px;
+    }
+    .err-code span { color: var(--c-gold-500); }
+    .err-title {
+      font-family: var(--font-display);
+      font-size: clamp(1.8rem, 3.4vw, 2.6rem);
+      font-weight: 500;
+      color: var(--c-black);
+      margin-bottom: 16px;
+    }
+    .err-text {
+      font-size: 1.05rem;
+      color: var(--c-grey-600);
+      max-width: 520px;
+      margin: 0 auto 40px;
+      line-height: 1.65;
+    }
+    .err-actions {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .err-links {
+      margin-top: 56px;
+      padding-top: 36px;
+      border-top: 1px solid rgba(14,14,14,0.08);
+    }
+    .err-links p {
+      font-size: 0.8rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--c-grey-600);
+      margin-bottom: 18px;
+    }
+    .err-links ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      gap: 28px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .err-links a {
+      font-size: 0.95rem;
+      color: var(--c-black);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color .2s;
+    }
+    .err-links a:hover { border-bottom-color: var(--c-gold-500); }
+  </style>
+</head>
+<body>
+  <header class="site-header" data-header>
+    <div class="container nav-wrap">
+      <a href="index.html" class="brand" aria-label="NAID — Accueil">
+        <span class="brand-mark">NAID</span>
+        <span class="brand-sub">Nur Alhayaa Interior Design</span>
+      </a>
+      <nav class="nav" aria-label="Principale">
+        <ul class="nav-links">
+          <li><a href="a-propos.html" class="nav-link">À propos</a></li>
+          <li><a href="services.html" class="nav-link">Services</a></li>
+          <li><a href="realisations.html" class="nav-link">Réalisations</a></li>
+          <li><a href="processus.html" class="nav-link">Processus</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="nav-right">
+        <a href="devis-rapide.html" class="btn btn-ghost btn-sm">Devis rapide</a>
+      </div>
+      <button class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main class="err-wrap">
+    <div class="err-card reveal is-visible">
+      <div class="err-code">4<span>0</span>4</div>
+      <h1 class="err-title">La page que vous cherchez s'est égarée</h1>
+      <p class="err-text">
+        Peut-être un lien obsolète, une adresse mal saisie, ou une page que nous avons déplacée au cours d'une rénovation. Retrouvons ensemble votre chemin.
+      </p>
+      <div class="err-actions">
+        <a href="index.html" class="btn btn-primary">Retour à l'accueil</a>
+        <a href="contact.html" class="btn btn-ghost">Nous écrire</a>
+      </div>
+
+      <div class="err-links">
+        <p>Ou explorez</p>
+        <ul>
+          <li><a href="a-propos.html">À propos</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="realisations.html">Réalisations</a></li>
+          <li><a href="processus.html">Processus</a></li>
+          <li><a href="devis-rapide.html">Devis rapide</a></li>
+        </ul>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="footer-brand">NAID</div>
+        <p class="footer-tagline">Nur Alhayaa Interior Design — Architecture d'intérieur & design global.</p>
+      </div>
+      <div>
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="a-propos.html">À propos</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="realisations.html">Réalisations</a></li>
+          <li><a href="processus.html">Processus</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:naid.deco.contact@gmail.com">naid.deco.contact@gmail.com</a></li>
+          <li><a href="tel:+221770000000">+221 77 000 00 00</a></li>
+          <li>Dakar · Paris</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Suivre</h4>
+        <ul>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">Pinterest</a></li>
+          <li><a href="#">LinkedIn</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <small>© <span id="current-year"></span> Nur Alhayaa Interior Design. Tous droits réservés.</small>
+      <small>Site conçu avec soin.</small>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

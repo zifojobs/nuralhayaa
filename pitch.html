@@ -1,0 +1,604 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Votre site web, pensé pour refléter NAID — Proposition</title>
+  <meta name="description" content="Proposition personnalisée de site web premium pour Nur Alhayaa Interior Design." />
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <style>
+    /* Pitch-specific styles */
+    .pitch-hero {
+      min-height: 80vh;
+      display: grid;
+      place-items: center;
+      padding: 140px 24px 80px;
+      background:
+        radial-gradient(circle at 15% 20%, rgba(201,169,97,.14), transparent 55%),
+        radial-gradient(circle at 85% 80%, rgba(28,74,45,.10), transparent 55%),
+        linear-gradient(180deg, #FAF7F2 0%, #F1E9DC 100%);
+      text-align: center;
+    }
+    .pitch-hero .eyebrow {
+      display: inline-block;
+      font-size: .72rem;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      color: var(--c-green-800);
+      padding: 8px 18px;
+      border: 1px solid rgba(28,74,45,.3);
+      border-radius: 999px;
+      margin-bottom: 32px;
+    }
+    .pitch-hero h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2.4rem, 5.5vw, 4.6rem);
+      font-weight: 500;
+      line-height: 1.05;
+      margin: 0 auto 28px;
+      max-width: 900px;
+      color: var(--c-black);
+    }
+    .pitch-hero h1 em {
+      font-style: italic;
+      color: var(--c-green-800);
+    }
+    .pitch-hero p {
+      font-size: 1.1rem;
+      color: var(--c-grey-600);
+      max-width: 620px;
+      margin: 0 auto 40px;
+      line-height: 1.65;
+    }
+
+    .pitch-section {
+      padding: 100px 24px;
+    }
+    .pitch-section.alt { background: var(--c-cream-100); }
+    .pitch-section.dark {
+      background: var(--c-green-800);
+      color: var(--c-cream-100);
+    }
+
+    .pitch-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .pitch-section h2 {
+      font-family: var(--font-display);
+      font-weight: 500;
+      font-size: clamp(1.8rem, 3.4vw, 2.8rem);
+      margin-bottom: 18px;
+    }
+    .pitch-section .lead {
+      font-size: 1.05rem;
+      color: var(--c-grey-600);
+      max-width: 680px;
+      margin-bottom: 48px;
+      line-height: 1.65;
+    }
+    .pitch-section.dark h2 { color: var(--c-cream-100); }
+    .pitch-section.dark .lead { color: rgba(250,247,242,.75); }
+
+    /* Why-now list */
+    .why-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 28px;
+      margin-top: 40px;
+    }
+    .why-item {
+      background: white;
+      padding: 32px 28px;
+      border-radius: 14px;
+      border: 1px solid rgba(14,14,14,.06);
+    }
+    .why-item .num {
+      font-family: var(--font-display);
+      font-style: italic;
+      font-size: 2.4rem;
+      color: var(--c-gold-500);
+      line-height: 1;
+      margin-bottom: 14px;
+    }
+    .why-item h3 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+    .why-item p {
+      font-size: .95rem;
+      color: var(--c-grey-600);
+      line-height: 1.55;
+    }
+
+    /* Included grid */
+    .incl-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 22px;
+      margin-top: 40px;
+    }
+    .incl-card {
+      background: rgba(250,247,242,.05);
+      border: 1px solid rgba(250,247,242,.12);
+      padding: 30px 26px;
+      border-radius: 12px;
+      transition: background .3s, border-color .3s;
+    }
+    .incl-card:hover {
+      background: rgba(250,247,242,.08);
+      border-color: rgba(201,169,97,.4);
+    }
+    .incl-card .tag {
+      display: inline-block;
+      font-size: .7rem;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--c-gold-500);
+      margin-bottom: 14px;
+    }
+    .incl-card h3 {
+      font-family: var(--font-display);
+      font-weight: 500;
+      font-size: 1.35rem;
+      margin-bottom: 8px;
+    }
+    .incl-card p {
+      font-size: .92rem;
+      color: rgba(250,247,242,.7);
+      line-height: 1.55;
+    }
+
+    /* Timeline */
+    .tl {
+      display: grid;
+      gap: 18px;
+      margin-top: 40px;
+    }
+    .tl-row {
+      display: grid;
+      grid-template-columns: 160px 1fr;
+      gap: 32px;
+      padding: 24px 0;
+      border-top: 1px solid rgba(14,14,14,.08);
+    }
+    .tl-row:last-child { border-bottom: 1px solid rgba(14,14,14,.08); }
+    .tl-week {
+      font-family: var(--font-display);
+      font-style: italic;
+      font-size: 1.2rem;
+      color: var(--c-green-800);
+    }
+    .tl-body h4 {
+      font-size: 1.05rem;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+    .tl-body p {
+      font-size: .95rem;
+      color: var(--c-grey-600);
+      line-height: 1.55;
+    }
+
+    /* Pricing */
+    .price-wrap {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+      margin-top: 40px;
+    }
+    .price-card {
+      background: white;
+      border-radius: 16px;
+      padding: 38px 32px;
+      border: 1px solid rgba(14,14,14,.08);
+      position: relative;
+    }
+    .price-card.featured {
+      border-color: var(--c-gold-500);
+      box-shadow: 0 20px 60px -20px rgba(201,169,97,.3);
+    }
+    .price-card.featured::before {
+      content: 'Recommandée';
+      position: absolute;
+      top: -14px; left: 32px;
+      background: var(--c-gold-500);
+      color: white;
+      font-size: .7rem;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+      padding: 6px 14px;
+      border-radius: 999px;
+    }
+    .price-card h3 {
+      font-family: var(--font-display);
+      font-weight: 500;
+      font-size: 1.6rem;
+      margin-bottom: 8px;
+    }
+    .price-card .amount {
+      font-family: var(--font-display);
+      font-size: 2.6rem;
+      color: var(--c-green-800);
+      font-weight: 500;
+      margin-bottom: 4px;
+    }
+    .price-card .term {
+      font-size: .82rem;
+      color: var(--c-grey-600);
+      margin-bottom: 24px;
+    }
+    .price-card ul {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 28px;
+    }
+    .price-card ul li {
+      padding: 10px 0;
+      border-top: 1px solid rgba(14,14,14,.06);
+      font-size: .92rem;
+      position: relative;
+      padding-left: 22px;
+    }
+    .price-card ul li::before {
+      content: '';
+      width: 6px; height: 6px;
+      background: var(--c-gold-500);
+      border-radius: 50%;
+      position: absolute;
+      left: 0; top: 18px;
+    }
+
+    /* Comparison */
+    .compare {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-top: 40px;
+    }
+    .compare > div {
+      padding: 32px 28px;
+      border-radius: 14px;
+    }
+    .compare .before {
+      background: #F3ECE0;
+      border: 1px dashed rgba(14,14,14,.2);
+    }
+    .compare .after {
+      background: var(--c-green-800);
+      color: var(--c-cream-100);
+    }
+    .compare h4 {
+      font-size: .72rem;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+      opacity: .7;
+    }
+    .compare p {
+      font-family: var(--font-display);
+      font-size: 1.3rem;
+      line-height: 1.35;
+      font-weight: 400;
+    }
+    @media (max-width: 720px) {
+      .compare { grid-template-columns: 1fr; }
+      .tl-row { grid-template-columns: 1fr; gap: 8px; }
+    }
+
+    /* CTA final */
+    .pitch-cta {
+      background: linear-gradient(135deg, var(--c-green-800) 0%, #143621 100%);
+      color: var(--c-cream-100);
+      padding: 120px 24px;
+      text-align: center;
+    }
+    .pitch-cta h2 {
+      font-family: var(--font-display);
+      font-weight: 500;
+      font-style: italic;
+      font-size: clamp(2rem, 4.5vw, 3.6rem);
+      margin-bottom: 20px;
+      color: var(--c-cream-100);
+    }
+    .pitch-cta p {
+      font-size: 1.05rem;
+      opacity: .8;
+      max-width: 560px;
+      margin: 0 auto 36px;
+    }
+    .pitch-cta .btn-primary {
+      --btn-bg: var(--c-gold-500);
+      --btn-text: #0E0E0E;
+      --btn-border: var(--c-gold-500);
+    }
+    .pitch-cta .btn-ghost {
+      --btn-bg: transparent;
+      --btn-text: #FAF7F2;
+      --btn-border: rgba(250,247,242,.5);
+    }
+    .pitch-cta .btn-ghost:hover {
+      --btn-bg: rgba(250,247,242,.1);
+      --btn-text: #FAF7F2;
+    }
+
+    .signed {
+      margin-top: 60px;
+      padding-top: 40px;
+      border-top: 1px solid rgba(250,247,242,.15);
+      font-size: .85rem;
+      opacity: .65;
+    }
+    .signed strong { color: var(--c-gold-500); }
+
+    .pitch-nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      padding: 18px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(250,247,242,.8);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      z-index: 100;
+      border-bottom: 1px solid rgba(14,14,14,.05);
+    }
+    .pitch-nav .logo {
+      font-family: var(--font-display);
+      font-style: italic;
+      font-weight: 500;
+      font-size: 1.3rem;
+      color: var(--c-green-800);
+    }
+    .pitch-nav .preview-link {
+      font-size: .85rem;
+      color: var(--c-black);
+      text-decoration: none;
+      border-bottom: 1px solid var(--c-gold-500);
+      padding-bottom: 2px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="pitch-nav">
+    <span class="logo">NAID · Proposition</span>
+    <a href="index.html" class="preview-link">Voir le site en démo →</a>
+  </div>
+
+  <!-- HERO -->
+  <section class="pitch-hero">
+    <div>
+      <span class="eyebrow">Proposition — Avril 2026</span>
+      <h1>Un site web pensé pour <em>refléter</em><br/>ce que NAID offre déjà.</h1>
+      <p>Chère Rokhaya, tu as construit une agence rare : un regard, une exigence, une signature. Ce site te donne enfin une vitrine à la hauteur — et un outil qui travaille pour toi chaque jour.</p>
+      <div class="btn-group" style="justify-content: center;">
+        <a href="index.html" class="btn btn-primary">Parcourir la démo</a>
+        <a href="#tarifs" class="btn btn-ghost">Voir les tarifs</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- POURQUOI MAINTENANT -->
+  <section class="pitch-section">
+    <div class="pitch-grid">
+      <h2>Pourquoi un site aujourd'hui</h2>
+      <p class="lead">Un flyer attire l'attention. Un Instagram entretient la présence. Mais c'est un site qui transforme un intérêt en prise de rendez-vous — et qui te positionne auprès des clients qui ne passent pas par les réseaux sociaux.</p>
+
+      <div class="why-list">
+        <div class="why-item">
+          <div class="num">01</div>
+          <h3>Crédibilité instantanée</h3>
+          <p>Promoteurs, clients hôteliers, particuliers haut de gamme : tous vérifient un site avant de te contacter. Un domaine propre, un design premium, et la conversation commence au bon endroit.</p>
+        </div>
+        <div class="why-item">
+          <div class="num">02</div>
+          <h3>Qualification automatique</h3>
+          <p>Le mini-quiz de devis capture le budget, la surface et le style du prospect avant même le premier échange. Tu gagnes des heures et tu filtres les demandes qui ne correspondent pas.</p>
+        </div>
+        <div class="why-item">
+          <div class="num">03</div>
+          <h3>Visibilité SEO à long terme</h3>
+          <p>Chaque réalisation devient une page indexée sur Google. Les requêtes "architecte d'intérieur Dakar", "décoration Paris 8e" te ramènent progressivement des leads, sans pub.</p>
+        </div>
+        <div class="why-item">
+          <div class="num">04</div>
+          <h3>Un actif qui t'appartient</h3>
+          <p>Instagram peut changer ses règles demain. Un site sur ton domaine, c'est une valeur stable — transmissible, mesurable, ton vrai patrimoine numérique.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AVANT / APRÈS -->
+  <section class="pitch-section alt">
+    <div class="pitch-grid">
+      <h2>Ce que ça change, concrètement</h2>
+      <p class="lead">Deux manières d'envisager la même conversation avec un prospect.</p>
+
+      <div class="compare">
+        <div class="before">
+          <h4>Avant</h4>
+          <p>« Pouvez-vous m'envoyer quelques photos de vos réalisations ? Et vos tarifs ? Et un exemple de ce que vous proposez pour un salon de 40m² ? »</p>
+        </div>
+        <div class="after">
+          <h4>Après</h4>
+          <p>« J'ai parcouru votre site, j'ai vu votre projet villa Dakar, j'ai fait l'estimation rapide. Je voudrais un rendez-vous pour discuter de mon appartement. »</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CE QUI EST INCLUS -->
+  <section class="pitch-section dark">
+    <div class="pitch-grid">
+      <h2>Ce qui est inclus dans la livraison</h2>
+      <p class="lead">Neuf pages conçues comme un système éditorial cohérent, avec les outils de conversion qui comptent vraiment pour une agence de design.</p>
+
+      <div class="incl-grid">
+        <div class="incl-card">
+          <span class="tag">Pages</span>
+          <h3>9 pages premium</h3>
+          <p>Accueil, À propos, Services, Processus, Réalisations, 2 études de cas, Devis rapide, Contact, 404.</p>
+        </div>
+        <div class="incl-card">
+          <span class="tag">Identité</span>
+          <h3>Design system sur-mesure</h3>
+          <p>Typographie éditoriale (Cormorant + Inter), palette vert forêt / or / crème, tokens réutilisables pour évoluer sans refonte.</p>
+        </div>
+        <div class="incl-card">
+          <span class="tag">Conversion</span>
+          <h3>Mini-quiz devis intelligent</h3>
+          <p>6 étapes qui calculent une fourchette budgétaire personnalisée et capturent les coordonnées du prospect automatiquement.</p>
+        </div>
+        <div class="incl-card">
+          <span class="tag">Rendez-vous</span>
+          <h3>Intégration Calendly</h3>
+          <p>Les prospects réservent un appel découverte directement depuis la page contact, selon ta disponibilité réelle.</p>
+        </div>
+        <div class="incl-card">
+          <span class="tag">Portfolio</span>
+          <h3>Galerie lightbox + filtres</h3>
+          <p>Filtrage par type (résidentiel, hôtellerie, promoteur, bureaux) et visualisation immersive des projets en plein écran.</p>
+        </div>
+        <div class="incl-card">
+          <span class="tag">Études de cas</span>
+          <h3>2 projets détaillés</h3>
+          <p>Villa Dakar 240m² et Appartement Paris 120m² : brief, moodboard, photos, témoignage — le modèle à dupliquer pour chaque futur projet.</p>
+        </div>
+        <div class="incl-card">
+          <span class="tag">SEO</span>
+          <h3>Référencement de base</h3>
+          <p>Balises meta, OpenGraph pour les partages, sitemap XML, robots.txt, favicon. Tout le terrain préparé pour Google.</p>
+        </div>
+        <div class="incl-card">
+          <span class="tag">Responsive</span>
+          <h3>Mobile, tablette, desktop</h3>
+          <p>70% de tes visiteurs viennent du mobile. Chaque page est pensée d'abord pour le smartphone, puis adaptée vers le haut.</p>
+        </div>
+        <div class="incl-card">
+          <span class="tag">Formation</span>
+          <h3>Guide de mise à jour</h3>
+          <p>Un document clair pour ajouter un projet, changer une photo, mettre à jour un texte — sans dépendre d'un développeur à chaque modification.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TIMELINE -->
+  <section class="pitch-section">
+    <div class="pitch-grid">
+      <h2>Planning de livraison</h2>
+      <p class="lead">Trois semaines de l'accord à la mise en ligne. Tu valides à chaque étape.</p>
+
+      <div class="tl">
+        <div class="tl-row">
+          <div class="tl-week">Semaine 1</div>
+          <div class="tl-body">
+            <h4>Collecte & contenu</h4>
+            <p>Sélection des 8-12 photos finales, rédaction des textes définitifs, récolte des 2-3 témoignages clients, configuration du domaine et des outils (Formspree + Calendly).</p>
+          </div>
+        </div>
+        <div class="tl-row">
+          <div class="tl-week">Semaine 2</div>
+          <div class="tl-body">
+            <h4>Intégration & ajustements</h4>
+            <p>Mise en place des contenus dans le site, génération des visuels IA pour les sections sans photo, fine-tuning typographique et colorimétrique.</p>
+          </div>
+        </div>
+        <div class="tl-row">
+          <div class="tl-week">Semaine 3</div>
+          <div class="tl-body">
+            <h4>Tests & mise en ligne</h4>
+            <p>Vérification sur 10+ appareils, audit accessibilité, soumission à Google Search Console, formation 1h en visio, mise en ligne officielle.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TARIFS -->
+  <section id="tarifs" class="pitch-section alt">
+    <div class="pitch-grid">
+      <h2>Investissement</h2>
+      <p class="lead">Deux formules, selon ton horizon. La version complète est recommandée si tu veux capturer des leads dès le jour 1.</p>
+
+      <div class="price-wrap">
+        <div class="price-card">
+          <h3>Essentiel</h3>
+          <div class="amount">1 800 €</div>
+          <p class="term">paiement unique · livraison 3 semaines</p>
+          <ul>
+            <li>Les 9 pages du site</li>
+            <li>Design premium sur-mesure</li>
+            <li>Formulaire de contact fonctionnel</li>
+            <li>Responsive mobile / desktop</li>
+            <li>SEO de base + sitemap</li>
+            <li>Mise en ligne sur ton hébergement</li>
+          </ul>
+          <a href="#cta" class="btn btn-ghost" style="width: 100%; justify-content: center;">Choisir Essentiel</a>
+        </div>
+
+        <div class="price-card featured">
+          <h3>Signature</h3>
+          <div class="amount">2 600 €</div>
+          <p class="term">paiement unique · livraison 3 semaines</p>
+          <ul>
+            <li>Tout ce qui est dans Essentiel, et :</li>
+            <li>Mini-quiz devis avec calcul automatique</li>
+            <li>Intégration Calendly pour les RDV</li>
+            <li>Galerie lightbox avec filtres</li>
+            <li>2 études de cas détaillées</li>
+            <li>Visuels IA générés sur-mesure</li>
+            <li>Page pitch / présentation commerciale</li>
+            <li>Formation 1h + guide de mise à jour</li>
+            <li>3 mois de support post-lancement</li>
+          </ul>
+          <a href="#cta" class="btn btn-primary" style="width: 100%; justify-content: center;">Choisir Signature</a>
+        </div>
+      </div>
+
+      <p style="margin-top: 32px; font-size: .9rem; color: var(--c-grey-600); text-align: center;">
+        Maintenance annuelle en option : <strong>360 € / an</strong> (hébergement, mises à jour de sécurité, 2h de modifications / mois).
+      </p>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section id="cta" class="pitch-cta">
+    <div style="max-width: 720px; margin: 0 auto;">
+      <h2>On lance ?</h2>
+      <p>Un seul appel pour discuter de tes objectifs, valider le brief, et caler la date de démarrage. Je réserve deux projets par mois pour garantir l'attention qu'ils méritent.</p>
+      <div class="btn-group" style="justify-content: center;">
+        <a href="mailto:zifo1819@gmail.com?subject=NAID%20—%20Je%20valide%20la%20proposition" class="btn btn-primary">Valider la proposition</a>
+        <a href="index.html" class="btn btn-ghost">Re-parcourir la démo</a>
+      </div>
+      <div class="signed">
+        Proposition préparée par <strong>Saïbo Danfakha</strong> · Freelance web &amp; design<br/>
+        zifo1819@gmail.com · Avril 2026
+      </div>
+    </div>
+  </section>
+
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', (e) => {
+        const id = a.getAttribute('href').slice(1);
+        const el = document.getElementById(id);
+        if (el) {
+          e.preventDefault();
+          el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
