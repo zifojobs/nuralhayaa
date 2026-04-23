@@ -14,7 +14,37 @@
   <style>
     @media print {
       @page { size: A4 landscape; margin: 0; }
+      .pitch-nav { display: none !important; }
+      .pitch-nav-print { display: flex !important; }
     }
+    .pitch-nav-print {
+      display: none;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 24px;
+      border-bottom: 1px solid rgba(14,14,14,.05);
+      background: rgba(250,247,242,0.8);
+    }
+    .pitch-nav-print .logo {
+      font-family: var(--font-display);
+      font-style: italic;
+      font-weight: 500;
+      font-size: 1.3rem;
+      color: var(--c-green-800);
+    }
+    .pitch-nav-print .preview-link {
+      font-size: .85rem;
+      color: var(--c-black);
+      text-decoration: none;
+      border-bottom: 1px solid var(--c-gold-500);
+      padding-bottom: 2px;
+    }
+    .pitch-nav-print.on-dark {
+      background: transparent;
+      border-color: rgba(250,247,242,.15);
+    }
+    .pitch-nav-print.on-dark .logo { color: var(--c-cream-100); }
+    .pitch-nav-print.on-dark .preview-link { color: var(--c-cream-100); }
     /* Pitch-specific styles */
     .pitch-hero {
       min-height: 80vh;
@@ -377,6 +407,11 @@
     <a href="index.html" class="preview-link">Voir le site en démo →</a>
   </div>
 
+  <nav class="pitch-nav-print" aria-hidden="true">
+    <span class="logo">NAID · Proposition</span>
+    <a href="index.html" class="preview-link">Voir le site en démo →</a>
+  </nav>
+
   <!-- HERO -->
   <section class="pitch-hero">
     <div>
@@ -576,6 +611,10 @@
   </section>
 
   <!-- FINAL CTA -->
+  <nav class="pitch-nav-print on-dark" aria-hidden="true">
+    <span class="logo">NAID · Proposition</span>
+    <a href="index.html" class="preview-link">Voir le site en démo →</a>
+  </nav>
   <section id="cta" class="pitch-cta">
     <div style="max-width: 720px; margin: 0 auto;">
       <h2>On lance ?</h2>
