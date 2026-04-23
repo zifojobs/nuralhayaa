@@ -1214,7 +1214,7 @@ section.tight { padding-block: clamp(3rem, 6vw, 5rem); }
   .two-col > * { width: 100%; }
   .card { text-align: center; align-items: center; }
   .card-number { text-align: center; }
-  .page-header { text-align: center; padding-top: 5rem; padding-bottom: 2rem; }
+  .page-header { text-align: center; padding-top: 9rem; padding-bottom: 2rem; }
   .page-header p { margin-inline: auto; max-width: 90%; }
   .cta-band { text-align: center; }
   .cta-band .btn-group, .cta-band .two-col > div:last-child { text-align: center !important; }
