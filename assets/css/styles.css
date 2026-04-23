@@ -632,7 +632,12 @@ section.tight { padding-block: clamp(3rem, 6vw, 5rem); }
 }
 @media (max-width: 640px) {
   .hero-mega { font-size: clamp(3rem, 14vw, 5rem); }
-  .hero-bottom-left { bottom: 7rem; }
+  .hero-bottom-left {
+    left: 1rem; right: 1rem; bottom: 7rem;
+    display: flex; flex-direction: column; align-items: center;
+    text-align: center; max-width: none;
+  }
+  .hero-bottom-left p { max-width: 100%; text-align: center; }
   .hero-scroll-center { bottom: 1.5rem; }
 }
 
